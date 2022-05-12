@@ -1,0 +1,16 @@
+Zewnętrzna paczka
+Aby umożliwić za pośrednictwem Cypressa dodawania zewnętrznych plików w ramach testów – konieczne jest dodanie paczki cypress-file-upload.  Dodanie tej paczki i szybka konfiguracja pozwoli Wam skorzystanie z tej możliwości.
+Konfiguracja
+Dodaj paczkę w naszym projekcie testowym poprzez wpisanie w terminalu:
+
+npm install --save-dev cypress-file-upload
+Drugim krokiem jest czy Twój projekt jest stworzony w TS czy JS. W przypadku TSa wejdź do tsconfig.json i dodaj:
+
+"compilerOptions": {
+  "types": ["cypress", "cypress-file-upload"]
+}
+W przypadku korzystania z JSa udaj się to lokalizacji cypress/support/commands.js a następnie dodaj tam:
+
+import 'cypress-file-upload';
+
+npm install --save-dev cypress-file-upload
